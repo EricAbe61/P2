@@ -1,10 +1,6 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useEffect } from 'react'
 import './App.css'
 import PokeDetails from './PokeDetails.jsx'
-
-import { useEffect } from "react";
 
 function App({id}) {
 
@@ -14,7 +10,6 @@ function App({id}) {
 
 
   useEffect(() => {
-    console.log("hello")
     try {
       fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
         .then(response => response.json())
