@@ -42,3 +42,21 @@ button {
 button:hover {
   background-color: #333;
 }
+
+.poke-wiki-button {
+  position: fixed; /* Fixed position to stay in place during scroll */
+  top: 10px; /* Distance from the top */
+  left: 10px; /* Distance from the left */
+  background-color: transparent;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-family: monospace;
+  z-index: 1000; /* Ensures it's on top of other elements */
+}
+
+.poke-wiki-button:hover {
+  color: #ddd; /* Hover effect */
+}

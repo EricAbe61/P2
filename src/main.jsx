@@ -12,7 +12,7 @@ const PokemonContainer = Array.from({ length: NumPokemon }, (_, i) => (
 createRoot(document.getElementById('root')).render(
   <StrictMode> 
     <div id="app-container">
-      <h1 className="title">Pokedex</h1> {/* Add title here */}
+      <h1 className="title">Pokedex</h1> {}
       <div className="pokemon-grid">
         {PokemonContainer}
       </div>
