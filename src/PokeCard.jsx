@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import PokeDetails from './PokeDetails.jsx';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function PokeCard({ id }) {
   const [PokemonName, setPokemonName] = useState("");
@@ -20,9 +19,8 @@ function PokeCard({ id }) {
 
   return (
     <div id="PokemonCard">
-      <h1>{PokemonName}</h1>
-      <img src={PokemonImage} alt={`${PokemonName}`} />
-      <button className="poke-wiki-button">Welcome to PokeWiki</button>
+      <h1 className="pokemon-name">{PokemonName}</h1>
+      <img src={PokemonImage} alt={`${PokemonName}`} className="pokemon-image" />
       <button onClick={() => setViewDetails(!viewDetails)}>
         {viewDetails ? "Hide Details" : "Poke Details"}
       </button>

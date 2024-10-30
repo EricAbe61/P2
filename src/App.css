@@ -2,8 +2,13 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+  padding-top: 3.5rem; 
   text-align: center;
-  background-color: #3492eb;
+  background-image: url('https://i.pinimg.com/736x/90/3c/e8/903ce82d065d12a760eeafe2aec9935a.jpg'); /* Replace with your image path */
+  background-size: cover; /* Scale image to cover the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
 }
 
 .title {
@@ -12,6 +17,11 @@
   margin-bottom: 1.5rem;
   text-align: center;
   font-family: monospace;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem 1rem; /* Padding around the text */
+  border-radius: 8px; /* Optional: Rounded corners */
+  display: inline-block; /* Ensures the background only covers the text area */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .pokemon-grid {
@@ -21,18 +31,32 @@
 }
 
 #PokemonCard {
-  background-color: #eb3461;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #a18cd1); /* Gradient colors */
+  background-size: 400% 400%; /* Makes the gradient cover a large area */
+  animation: gradientAnimation 10s ease infinite; /* Smooth animation to create fading effect */
   border: 1px solid #fff;
   padding: 1rem;
   text-align: center;
   color: white;
   border-radius: 8px; 
+  transition: transform 0.3s ease;
+}
+
+#PokemonCard:hover {
+  transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+/* Optional: Animate the gradient for a dynamic fading effect */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 200% 50%; }
+  200% { background-position: 0% 50%; }
 }
 
 button {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
   border: none;
   border-radius: 4px;
@@ -44,19 +68,35 @@ button:hover {
 }
 
 .poke-wiki-button {
-  position: fixed; /* Fixed position to stay in place during scroll */
-  top: 10px; /* Distance from the top */
-  left: 10px; /* Distance from the left */
-  background-color: transparent;
+  position: fixed; 
+  top: 10px; 
+  left: 10px; 
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   color: white;
   font-size: 1.2rem;
   font-weight: bold;
   border: none;
   cursor: pointer;
   font-family: monospace;
-  z-index: 1000; /* Ensures it's on top of other elements */
+  z-index: 1000; 
 }
 
 .poke-wiki-button:hover {
-  color: #ddd; /* Hover effect */
+  color: #ddd;
 }
+
+.pokemon-image {
+  transition: transform 0.3s ease; 
+}
+
+.pokemon-image:hover {
+  transform: scale(1.8);
+  cursor: pointer; 
+}
+
+.pokemon-name {
+  text-decoration: underline;
+}
+

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import './App.css';
 
 function PokeDetails({ id }) {
   const [details, setDetails] = useState(null);
@@ -13,8 +14,8 @@ function PokeDetails({ id }) {
   if (!details) return <p>Loading details...</p>;
 
   return (
-    <div>
-      <h2>{details.name.toUpperCase()}</h2>
+    <div className="poke-details-box">
+      <h2>{`${details.name.toUpperCase()}:`}</h2>
       <p>Type: {details.types.map(typeInfo => typeInfo.type.name).join(', ')}</p>
       <p>Abilities: {details.abilities.map(abilityInfo => abilityInfo.ability.name).join(', ')}</p>
     </div>
@@ -22,4 +23,3 @@ function PokeDetails({ id }) {
 }
 
 export default PokeDetails;
-
